@@ -25,7 +25,7 @@ module Lita
 
         now = Time.now
         timestamp = now.to_i
-        start_time = 1549734319
+        start_time = now.to_i - 8000
 
         # Interval acquired
         interval = response.matches[0][0]
@@ -48,8 +48,10 @@ module Lita
         begin
           temps, unixtimes = get_dynamo_results(dynamodb, timestamp, start_time)
 
-          Lita.logger.debug "temps sent: #{temps}"
-          Lita.logger.debug "unixtimes sent: #{unixtimes}"
+          # Lita.logger.debug "temps sent: #{temps}"
+          # Lita.logger.debug "unixtimes sent: #{unixtimes}"
+          Lita.logger.debug "temps sent: #{temps.count}"
+          Lita.logger.debug "unixtimes sent: #{unixtimes.count}"
 
           # timing labels, break this array down into grid lines
           # that make sense on the graph.  Uncluttered.
