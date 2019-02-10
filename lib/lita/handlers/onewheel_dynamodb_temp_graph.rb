@@ -16,7 +16,7 @@ module Lita
             command: true,
             help: { '!tempgraph' => 'temp graph!' }
 
-      def graph_generate(response)
+      def generate_graph(response)
         Aws.config.update({ region: "us-west-2",
                             credentials: Aws::Credentials.new(Lita.config.api_key, Lita.config.api_secret)
                           })
