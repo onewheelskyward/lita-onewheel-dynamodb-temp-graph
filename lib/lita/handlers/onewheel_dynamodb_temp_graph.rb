@@ -28,11 +28,11 @@ module Lita
 
         begin
           params = {
-              table_name: table_name,
+              table_name: config.table_name,
               key_condition_expression: "#sensor_id = :sensor_id and unixtime between :start and :stop",
               expression_attribute_names: { "#sensor_id" => "sensor_id" },
               expression_attribute_values: {
-                  ":sensor_id" => sensor_id,
+                  ":sensor_id" => config.sensor_id,
                   ":start" => 1549734319,
                   ":stop" => timestamp
               }
