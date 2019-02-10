@@ -25,6 +25,7 @@ module Lita
 
         now = Time.now
         timestamp = now.to_i
+        start_time = 1549734319
 
         # Interval acquired
         interval = response.matches[0][0]
