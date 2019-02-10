@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'timecop'
 
 describe Lita::Handlers::OnewheelDynamodbTempGraph, lita_handler: true do
   # it { is_expected.to route_command('aqi') }
