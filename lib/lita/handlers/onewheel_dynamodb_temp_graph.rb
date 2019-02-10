@@ -18,7 +18,7 @@ module Lita
 
       def generate_graph(response)
         Aws.config.update({ region: "us-west-2",
-                            credentials: Aws::Credentials.new(Lita.config.api_key, Lita.config.api_secret)
+                            credentials: Aws::Credentials.new(config.api_key, config.api_secret)
                           })
 
         dynamodb = Aws::DynamoDB::Client.new
@@ -68,7 +68,7 @@ module Lita
 
           s3.put_object({
              body: g.to_blob(),
-             bucket: Lita.config.s3_bucket,
+             bucket: config.s3_bucket,
              key: object_key,
           })
 
