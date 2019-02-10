@@ -30,6 +30,9 @@ module Lita
         # Interval acquired
         interval = response.matches[0][0]
         if interval
+          if m = interval.match(/(\d+)h/)
+            start_time = timestamp - m[1].to_i * 3600
+          end
           if m = interval.match(/(\d+)m/)
             start_time = timestamp - m[1].to_i * 60
           end
