@@ -79,7 +79,8 @@ module Lita
 
           labels.push Time.at(unixtimes.max).strftime("%H:%M")
 
-          g = Gruff::Bezier.new
+          # g = Gruff::Bezier.new
+          g = Gruff::Line.new
           g.title = 'TempSW'
           g.labels = {
               0 => labels[0],
