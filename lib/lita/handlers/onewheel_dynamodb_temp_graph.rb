@@ -56,10 +56,10 @@ module Lita
           Lita.logger.debug "temps sent: #{temps.count}"
           Lita.logger.debug "unixtimes sent: #{unixtimes.count}"
 
-          while temps.count > 100
-            temps,right = temps.partition.each_with_index{ |el, i| i.even? }
-            unixtimes,right = unixtimes.partition.each_with_index{ |el, i| i.even? }
-          end
+          # while temps.count > 100
+          #   temps,right = temps.partition.each_with_index{ |el, i| i.even? }
+          #   unixtimes,right = unixtimes.partition.each_with_index{ |el, i| i.even? }
+          # end
 
           # Lita.logger.debug "temps sent: #{temps}"
           # Lita.logger.debug "unixtimes sent: #{unixtimes}"
