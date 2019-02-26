@@ -81,7 +81,7 @@ module Lita
 
           # g = Gruff::Bezier.new
           g = Gruff::Line.new
-          g.title = 'TempSW'
+          g.title = "TempSW #{temps.min} - #{temps.max}"
           g.labels = {
               0 => labels[0],
               iterator => labels[1],
